@@ -1,0 +1,177 @@
+
+@import url('_newsletter.css?v=2');
+
+:root {
+    --primary-color: hsl(200, 80%, 40%);
+    --secondary-color: hsl(56, 99%, 65%);
+    --alternative-color: hsl(4, 80%, 57%);
+}
+
+html {
+}
+
+body {
+    background: var(--secondary-color);
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+#app {
+    min-height: 100vh;
+}
+
+.site-background {
+    background-size: 100%;
+    background-image: linear-gradient(180deg, var(--secondary-color) calc(100% - 200px), var(--primary-color));
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    min-height: 100vh;
+    height: 100%;
+    padding-left: calc(100vw - 100%);
+}
+
+.layout {
+    position:relative;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 115px auto;
+    grid-template-areas:
+        "main"
+        "aside"
+        "art";
+    color: var(--primary-color);
+    min-height: 100vh;
+    margin: 0 min(10%, 20px);
+}
+
+
+
+aside {
+    max-width: 150px;
+    grid-area: aside;
+    padding-top: 10px;
+    display: block;
+    margin: auto;
+}
+
+    aside img {
+        margin: auto;
+    }
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+.art {
+    grid-area: art;
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp( 24px,  5vw,  48px );
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    margin-bottom:2rem;
+}
+
+    footer > ul {
+    }
+
+.availability {
+    margin-bottom:3rem;
+}
+
+ul.stores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding:0;
+}
+
+li.store img {
+}
+
+ul.socials {
+    list-style: none;
+    padding: 0;
+
+}
+
+.social-twitter {
+    /*margin:5%;*/
+}
+
+    .social-twitter img {
+        width: auto;
+    }
+
+.art {
+    margin-top: auto;
+
+}
+
+    .art img {
+        margin-top: -40px;
+    }
+
+@media (min-width: 576px) {
+    .layout {
+        grid-template-columns: minmax(52px,1fr) 435px minmax(52px,1fr);
+        grid-template-areas:
+            "aside main none"
+            "aside art none"
+            "aside art footer";
+    }
+
+    aside {
+        padding-top: 80px;
+        justify-self: end;
+        margin: 0;
+    }
+
+    footer {
+        justify-content: end;
+        position: static;
+    }
+}
+
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 150px 435px 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout {
+        grid-template-columns: 150px 658px 150px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .layout {
+        grid-template-columns: 150px 866px 150px;
+    }
+}
+
+@media (min-width: 1348px) {
+    .layout {
+        grid-template-columns: 150px 1014px 150px;
+    }
+}
