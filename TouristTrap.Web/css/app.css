@@ -99,7 +99,7 @@ ul.stores {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 3rem;
     padding:0;
 }
@@ -127,7 +127,7 @@ ul.socials {
 }
 
     .art img {
-        margin-top: -40px;
+        margin-top: 45px;
     }
 
 @media (min-width: 576px) {
@@ -175,3 +175,20 @@ ul.socials {
         grid-template-columns: 150px 1014px 150px;
     }
 }
+
+/* unvisited link */
+a:link {
+  color: #1481b8;
+}
+
+/* visited link */
+a:visited {
+  color: #1481b8;
+}
+
+/* mouse over link */
+a:hover {
+  color: #e94539;
+}
+
+
